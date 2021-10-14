@@ -35,10 +35,15 @@ module "vpc" {
 ```
 
 # Variables:
+
 project - enter your project name(string)
+
 environment - enter your project environment name(string)
+
 region - enter region where you want to provision the vpc(sting)
+
 vpc_cidr - enter valid private cidr block(sting)
+
 cidr_newbit - (number)
 ```
    eg: 
@@ -58,12 +63,13 @@ single_nat_gateway - enable single az nat-gateway (bool)
   
  
 
-Run using terraform init,plan,apply commands (make sure you have awscli configured in your machine. If you are using any custom awscli profile, you can mention variable "profile = <your profile name>" in the main.tf file, default profile is 'default'
+Run using terraform init, plan, apply commands (make sure you have awscli configured in your machine. If you are using any custom awscli profile, you can mention variable "profile = <your profile name>" in the main.tf file, default profile is 'default'
 
-
+```
 Note: 
 1. By default module creates multi-az nat-gateway, specify 'single_nat_gateway = true' explicitly in the main.tf file to create single-az nat-gateway
 2. If you are using multi-az nat-gateway, make sure public_subnet count is set to a value greater than or equal to count of private1_subnet or private2_subnet(whichever is greater), else you will get error.
 3. If you want to create public subnets only, set count for private subnets as zero(for two tier architecture, set private2_subnet count as zero if you need only public_subnet and private1_subnet)
 4. You can use different vpc cidr block, subnets will get the cidr blocks automatically based on the cidr_netbit value   
 5. Suppose if the you have entered a subnet count value greater than the availability zones in the region, the subnet creation count will be limited at the number of availability zone
+```
