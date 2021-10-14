@@ -2,7 +2,7 @@
 
 Clone the repo to your terraform project folder using below command
 ```
-git clone https://github.com/prasoon010/myterraform_vpc_module.git
+$ git clone https://github.com/prasoon010/myterraform_vpc_module.git
 ```
 
 Sample main.tf file to use the vpc module is given below
