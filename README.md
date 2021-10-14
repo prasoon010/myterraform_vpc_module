@@ -48,7 +48,7 @@ cidr_newbit - (number)
 ```
    eg: 
        if vpc cidr block is 172.16.0.0/16 and cidr_netbit is 5
-       subnet cidr blocks will be 172.16.0.0/21, 172.16.8.0/21, 172.16.16.0/21 ...172.16.248.0/21 (total 16 subnet cidr blocks available)
+       subnet cidr blocks will be 172.16.0.0/21, 172.16.8.0/21, 172.16.16.0/21 ...172.16.248.0/21 (total 32 subnet cidr blocks available)
        
        if vpc cidr block is 172.16.0.0/16 and cidr_netbit is 4
        subnet cidr blocks will be 172.16.0.0/20, 172.16.16.0/20, 172.16.32.0/20 .... 172.16.240.0/20 (total 16 subnet cidr bocks available)
