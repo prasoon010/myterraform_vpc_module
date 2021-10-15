@@ -66,7 +66,7 @@ single_nat_gateway - enable single az nat-gateway (bool)
 Run using terraform init, plan, apply commands (make sure you have awscli configured in your machine. If you are using any custom awscli profile, you can mention variable "profile = your profile name" in the main.tf file, default profile is 'default'
 
 
-#Note: 
+# Note: 
 
 ```
 1. By default module creates multi-az nat-gateway, specify 'single_nat_gateway = true' explicitly in the main.tf file to create single-az nat-gateway
